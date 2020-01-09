@@ -30,6 +30,12 @@
   <h2 class="jump">SPREADS!</h2>
 
 <script>
+
+  // map, spread, queryselectorall
+
+  const word = document.querySelector('.jump');
+  const wordJumps = [...word.textContent].map(char => `<span>${char}</span>`).join('');
+  word.innerHTML = wordJumps;
   
 </script>
 </body>
