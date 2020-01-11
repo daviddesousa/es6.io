@@ -8,10 +8,13 @@
 <script>
 
   function ajax(url) {
-    fetch(url).then(data => data.json()).then(data => dataGen.next(data))
+    fetch(url).then(data => data.json()).then(data => dataGen.next(data));
   }
 
-  function* steps() {
+  // Generator Function
+  // Asterix can either be appended to `function`
+  // or prepended to the function's name
+  function *steps() { 
     console.log('fetching beers');
     const beers = yield ajax('http://api.react.beer/v2/search?q=hops&type=beer');
     console.log(beers);
