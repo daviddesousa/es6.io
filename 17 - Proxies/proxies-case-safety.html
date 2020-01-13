@@ -13,6 +13,7 @@
       if (!(name in target) && likeKey) {
         throw new Error(`Oops! Looks like like we already have a(n) ${name} property but with the case of ${likeKey}.`);
       }
+
       target[name] = value;
     }
   };
