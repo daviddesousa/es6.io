@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <title>Async Await</title>
 </head>
 
@@ -19,7 +20,7 @@
     function catchErrors(fn) {
       return function (...args) {
         return fn(...args).catch((err) => {
-          console.error('Ohhhh nooo!!!!!');
+          console.error('Oh noo!');
           console.error(err);
         });
       }
